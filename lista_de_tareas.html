@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="lista_de_tareas.css">
+</head>
+<body>
+    
+   
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo UNISIERRA" class="header-logo" onerror="this.src='https://via.placeholder.com/65x65?text=UNISIERRA'">
+            <div class="header-text">
+                <h1>Universidad de la Sierra</h1>
+                <p>Sistema Web de Aprendizaje ISC | Introduccion a la Ingenieria en Sistemas Computacionales</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="cursos.html">Cursos</a>
+        <a href="lista_de_tareas.html">Lista de tareas</a>
+        <a href="PanelAlumno.html">Perfil</a>
+        <a href="visualizar_calificaciones.html">Calificaciones</a>
+        <a href="reportes_de_progreso.html">Reportes de Progreso</a>
+    </nav>
+   
+
+    <main class="main-container">
+        <h1>Lista de Tareas Pendientes</h1>
+        <form action="#" method="POST" class="formulario-tareas">
+        <section id="tarea1" >
+            <!--Se presentan las tareas-->
+            
+            <h2>Fecha de Entrega: <time datetime="2026-10-22T22:00">Martes 20/Oct/2026 a las 22:00</time></h2>
+            <ul>
+                <li>
+                    <details open>
+                        <summary>
+                            <label>Base de Datos</label>
+                            <label><input type="checkbox"> <strong>Diseño de Modelo Entidad-Relacion</strong></label>
+                        </summary>
+                        <p>Descripción: Realizar un modelo en base a la informacion de la plataforma.</p>
+                        <button type="button" class="btn-entregar">Entregar tarea</button>
+                    </details>
+                </li>
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h2>Fecha de Entrega: <time datetime="2026-10-24T23:59">Sabado 24/Oct/2026 a las 23:59</time></h2>
+             <ul>
+                <li>
+                    <details open>
+                        <summary>
+                            <label>Fundamentos de Redes</label>
+                            <label><input type="checkbox"> <strong>Practica de Subnetting e IP</strong></label>
+                        </summary>
+                        <p>Descripción: Realizar la practica con valor del 33% de el semestre.</p>
+                        <button type="button" class="btn-entregar">Entregar tarea</button>
+                    </details>
+                </li>
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h2>Fecha de Entrega: <time datetime="2026-10-28T23:59">Miercoles 28/Oct/2026 a las 23:59</time></h2>
+            <ul>
+                <li>
+                    <details open>
+                        <summary>
+                            <label>Hardware</label>
+                            <label> <input type="checkbox"><strong>Informe sobre Arquitectura Von Neumann</strong></label>
+                        </summary>
+                        <p>Descripción: Informe en base al contenido en la plataforma </p>
+                        <button type="button" class="btn-entregar">Entregar tarea</button>
+                    </details>
+                </li>
+            </ul>
+        </section>
+
+        </form>
+    </main>
+
+    <footer style="margin-top: 40px; width: 100%; text-align: center;">
+        <p style="color: var(--gris-neutro); font-size: 0.9rem;">© 2026 Universidad de la Sierra - Ingeniería en Sistemas Computacionales</p>
+    </footer>
+
+</body>
+
+<script>
+    const botones = document.querySelectorAll('.btn-entregar');
+
+    botones.forEach(function(boton) {
+        boton.addEventListener('click', function() {
+            // Busca el <section> contenedor de ESTE botón en específico
+            const tarjeta = boton.closest('section');
+            tarjeta.classList.add('ocultar');
+
+            // Opcional: oculta también el <hr> siguiente para que no queden líneas sueltas
+            const separador = tarjeta.nextElementSibling;
+            if (separador && separador.tagName === 'HR') {
+                separador.classList.add('ocultar');
+            }
+        });
+    });
+</script>
+</html>

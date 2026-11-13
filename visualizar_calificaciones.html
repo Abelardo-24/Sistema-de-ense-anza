@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Calificaciones</title>
+    
+    <!-- Aquí vinculamos la hoja de estilos externa -->
+    <link rel="stylesheet" href="visualizar_calificaciones.css">
+</head>
+<body>
+    
+   
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo UNISIERRA" class="header-logo" onerror="this.src='https://via.placeholder.com/65x65?text=UNISIERRA'">
+            <div class="header-text">
+                <h1>Universidad de la Sierra</h1>
+                <p>Sistema Web de Aprendizaje ISC | Introduccion a la Ingenieria en Sistemas Computacionales</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="cursos.html">Cursos</a>
+        <a href="lista_de_tareas.html">Lista de tareas</a>
+        <a href="PanelAlumno.html">Perfil</a>
+        <a href="visualizar_calificaciones.html">Calificaciones</a>
+        <a href="reportes_de_progreso.html">Reportes de Progreso</a>
+    </nav>
+    
+
+    <section id="modulo-calificaciones">
+        <header>
+            <h2>Historial Académico</h2>
+            <p><strong>Institución:</strong> Universidad de la Sierra</p>
+            <p><strong>Programa:</strong> Ingeniería en Sistemas Computacionales</p>
+            <p><strong>Periodo Escolar:</strong> 2026-2</p>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Clave</th>
+                    <th>Materia</th>
+                    <th>Profesor</th>
+                    <th>Parcial 1</th>
+                    <th>Parcial 2</th>
+                    <th>Parcial 3</th>
+                    <th>Asistencia (%)</th>
+                    <th>Promedio Final</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ISC-105</td>
+                    <td>Programación Orientada a Objetos</td>
+                    <td>Ing. Omar Btte</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>95</td>
+                    <td>100%</td>
+                    <td>90</td>
+                    <td class="aprobado">Aprobada</td>
+                </tr>
+                <tr>
+                    <td>ISC-106</td>
+                    <td>Estructuras de Datos</td>
+                    <td>Dr. Ulises Ponce</td>
+                    <td>60</td>
+                    <td>55</td>
+                    <td>70</td>
+                    <td>80%</td>
+                    <td>61</td>
+                    <td class="reprobado">Reprobada</td>
+                </tr>
+                <tr>
+                    <td>ISC-107</td>
+                    <td>Bases de Datos Relacionales</td>
+                    <td>Dr. Miguel Garcia</td>
+                    <td>88</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>95%</td>
+                    <td>-</td>
+                    <td>En curso</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="captura-calificaciones">
+        <div class="panel-encabezado">
+            <h2>Panel de Captura de Calificaciones</h2>
+            <p><strong>Materia:</strong> Bases de Datos Relacionales (ISC26-02)</p>
+            <p><strong>Programa:</strong> ISC | Universidad de la Sierra</p>
+        </div>
+
+        <form action="/guardar-calificaciones" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Alumno</th>
+                        <th>Parcial 1</th>
+                        <th>Parcial 2</th>
+                        <th>Parcial 3</th>
+                        <th>Asistencia (%)</th>
+                        <th>Promedio General</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2300155</td>
+                        <td style="text-align: left;">Silva , Karla Sophia</td>
+                        <td><input type="number" name="p1_2300155" min="0" max="100" value="85" required></td>
+                        <td><input type="number" name="p2_2300155" min="0" max="100" value="90" required></td>
+                        <td><input type="number" name="p3_2300155" min="0" max="100" value=""></td>
+                        <td><input type="number" name="asist_2300155" min="0" max="100" value="95" required></td>
+                        <td><input type="number" readonly value="87.5"></td>
+                    </tr>
+                    <tr>
+                        <td>2300189</td>
+                        <td style="text-align: left;">Martínez Silva, Jose</td>
+                        <td><input type="number" name="p1_2300189" min="0" max="100" value="70" required></td>
+                        <td><input type="number" name="p2_2300189" min="0" max="100" value="65" required></td>
+                        <td><input type="number" name="p3_2300189" min="0" max="100" value=""></td>
+                        <td><input type="number" name="asist_2300189" min="0" max="100" value="80" required></td>
+                        <td><input type="number" readonly value="67.5"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="acciones-globales">
+                <button type="button" class="btn-guardar">Guardar Borrador</button>
+                <button type="button" class="btn-publicar">Subir Calificaciones Oficiales</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>

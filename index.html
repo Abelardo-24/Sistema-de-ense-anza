@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad de la Sierra | Sistema Web de Aprendizaje ISC</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilosBienvenida.css">
+</head>
+
+<body>
+
+    <!-- BARRA PRINCIPAL ESTILO UNISIERRA -->
+    <header class="top-header">
+        <div class="header-brand" onclick="mostrarVista('inicio')">
+            <div class="logo-box">
+                <img src="logo.png" alt="Logo Universidad de la Sierra"
+                    onerror="this.src='https://via.placeholder.com/150x50?text=UNISIERRA'">
+            </div>
+            <div class="header-titles">
+                <h1>Universidad de la Sierra</h1>
+                <p id="headerSubtitulo">Sistema Web de Aprendizaje ISC | Introduccion a la Ingenieria en Sistemas
+                    Computacionales</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="btn-auth-nav" onclick="mostrarVista('login')">
+                <i class="fa-solid fa-right-to-bracket"></i> Acceso Plataforma
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================== VISTA: INICIO ===================== -->
+    <div class="vista activa" id="vista-inicio">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <div class="hero-badges">
+                        <span class="badge-item"><i class="fa-solid fa-graduation-cap"></i> Materia Oficial</span>
+                        <span class="badge-item"><i class="fa-solid fa-code"></i> ISC UNISIERRA</span>
+                    </div>
+                    <h2>Bienvenido al Entorno de Aprendizaje de <span>Ingeniería en Sistemas</span></h2>
+                    <p>Plataforma interactiva diseñada para la asignatura de Introducción a la Ingeniería en Sistemas
+                        Computacionales. Accede a tus clases, prácticas y actividades de evaluación.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary-hero" onclick="mostrarVista('login')">
+                            <i class="fa-solid fa-user-check"></i> Iniciar Sesión / Registro
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-card-preview">
+                    <img src="logocarrera.png" alt="Logo ISC"
+                        onerror="this.src='https://via.placeholder.com/120?text=ISC+Logo'">
+                    <h3>Ingeniería en Sistemas Computacionales</h3>
+                    <p>Formando profesionales capaces de innovar, diseñar y gestionar soluciones tecnológicas avanzadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE MÓDULOS DE LA MATERIA -->
+        <main class="container">
+            <div class="section-header">
+                <h2>Estructura del Curso</h2>
+                <p>El programa académico de Introducción a la Ingeniería en Sistemas Computacionales se centra
+                    exclusivamente en 4 ejes temáticos fundamentales:</p>
+            </div>
+
+            <div class="modules-grid">
+                <!-- MÓDULO 1: REDES -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="module-title-box">
+                            <h3>Fundamentos de Redes Computacionales</h3>
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <p>Principios de conectividad, topologías de red, modelo OSI/TCP-IP, direccionamiento IP y
+                            transmisión de datos en entornos empresariales.</p>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-tag">Módulo 01</span>
+                        <i class="fa-solid fa-arrow-right" style="color: var(--neutral-gray);"></i>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 2: BASE DE DATOS -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div class="module-title-box">
+                            <h3>Base De Datos</h3>
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <p>Introducción al modelado entidad-relación, lenguaje SQL, diseño de tablas y gestión eficiente
+                            de la información institucional.</p>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-tag">Módulo 02</span>
+                        <i class="fa-solid fa-arrow-right" style="color: var(--neutral-gray);"></i>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 3 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <div class="module-title-box">
+                            <h3>Hardware</h3>
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <p>Arquitectura interna de la computadora, procesadores, memorias, dispositivos E/S,
+                            mantenimiento y ensamblaje de sistemas de cómputo.</p>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-tag">Módulo 03</span>
+                        <i class="fa-solid fa-arrow-right" style="color: var(--neutral-gray);"></i>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 4 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="module-title-box">
+                            <h3>Software</h3>
+                        </div>
+                    </div>
+                    <div class="module-body">
+                        <p>Sistemas operativos, algoritmos, lógica de programación, lenguajes de desarrollo y ciclo de
+                            vida de las aplicaciones informáticas.</p>
+                    </div>
+                    <div class="module-footer">
+                        <span class="module-tag">Módulo 04</span>
+                        <i class="fa-solid fa-arrow-right" style="color: var(--neutral-gray);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARACTERÍSTICAS ADICIONALES -->
+            <div class="features-section">
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <div>
+                            <h4>Laboratorios Prácticos</h4>
+                            <p>Prácticas guiadas paso a paso para cada uno de los 4 módulos de la materia.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <div>
+                            <h4>Panel Docente y Alumno</h4>
+                            <p>Gestión personalizada de calificaciones, actividades y retroalimentación académica.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div>
+                            <h4>Seguimiento de Progreso</h4>
+                            <p>Monitoreo en tiempo real de los avances en tareas y evaluaciones del curso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===================== VISTA: INICIO DE SESIÓN ===================== -->
+    <div class="vista auth-vista" id="vista-login">
+        <div class="contenedor-titulo">
+            <h2 class="titulo-seccion">Inicio de sesión</h2>
+        </div>
+
+        <form class="form-auth" id="formLogin">
+            <!-- Seleccionar tipo de usuario -->
+            <fieldset class="selector-rol">
+                <legend>Ingresar como:</legend>
+                <div class="opciones-rol">
+                    <input type="radio" id="loginRolEstudiante" name="rol" value="estudiante" checked>
+                    <label for="loginRolEstudiante">Estudiante</label>
+
+                    <input type="radio" id="loginRolProfesor" name="rol" value="profesor">
+                    <label for="loginRolProfesor">Profesor</label>
+                </div>
+            </fieldset>
+
+            <!-- Correo electrónico -->
+            <p>
+                <label for="loginCorreo">Correo electrónico:</label><br>
+                <input type="email" id="loginCorreo" name="CorreoElectronico" placeholder="ejemplo@correo.com" required>
+            </p>
+
+            <!-- Contraseña -->
+            <p>
+                <label for="loginContrasenia">Contraseña:</label><br>
+                <input type="password" id="loginContrasenia" name="Contrasenia" required>
+            </p>
+
+            <p>
+                <button type="submit" class="btn-primary-hero">
+                    <i class="fa-solid fa-user-check"></i> Iniciar sesión
+                </button>
+            </p>
+
+            <p>
+                <label>Regístrate gratis <a href="#" class="auth-link" onclick="mostrarVista('registro', event)">Crear
+                        una cuenta</a></label>
+            </p>
+        </form>
+    </div>
+
+    <!-- ===================== VISTA: REGISTRO ===================== -->
+    <div class="vista auth-vista" id="vista-registro">
+        <div class="contenedor-titulo">
+            <h2 class="titulo-seccion">Crear cuenta</h2>
+        </div>
+
+        <form class="form-auth" id="formRegistro">
+            <!-- Seleccionar tipo de usuario -->
+            <fieldset class="selector-rol">
+                <legend>Registrarse como:</legend>
+                <div class="opciones-rol">
+                    <input type="radio" id="regRolEstudiante" name="rol" value="estudiante" checked>
+                    <label for="regRolEstudiante">Estudiante</label>
+
+                    <input type="radio" id="regRolProfesor" name="rol" value="profesor">
+                    <label for="regRolProfesor">Profesor</label>
+                </div>
+            </fieldset>
+
+            <p>
+                <label for="regUsuario">Nombre de usuario:</label><br>
+                <input type="text" id="regUsuario" name="NombreUsuario" required>
+            </p>
+
+            <p>
+                <label for="regCorreo">Correo electrónico:</label><br>
+                <input type="email" id="regCorreo" name="CorreoElectronico" placeholder="ejemplo@correo.com" required>
+            </p>
+
+            <p>
+                <label for="regContrasenia">Contraseña:</label><br>
+                <input type="password" id="regContrasenia" name="Contrasenia" required>
+            </p>
+
+            <p>
+                <label for="regConfirmar">Confirmar Contraseña:</label><br>
+                <input type="password" id="regConfirmar" name="ConfirmarContrasenia" required>
+            </p>
+
+            <div class="auth-error" id="regError">Las contraseñas no coinciden.</div>
+
+            <!-- Género -->
+            <p>
+                <label>Género:</label><br>
+                <input class="radio-genero" type="radio" name="Sexo" id="Masculino" value="Masculino" required>
+                <label for="Masculino">Masculino</label>
+                <input class="radio-genero" type="radio" name="Sexo" id="Femenino" value="Femenino" required>
+                <label for="Femenino">Femenino</label>
+                <input class="radio-genero" type="radio" name="Sexo" id="NoDecirlo" value="NoDecirlo" required>
+                <label for="NoDecirlo">Prefiero no decirlo</label>
+            </p>
+
+            <!-- Semestre (solo estudiantes) -->
+            <p id="campoSemestre">
+                <label for="Semestre">Semestre:</label><br>
+                <select id="Semestre" name="Semestre" required>
+                    <option value="" disabled selected>Selecciona un Semestre</option>
+                    <option value="1ro">1er semestre</option>
+                    <option value="2do">2do semestre</option>
+                    <option value="3ro">3er semestre</option>
+                    <option value="4to">4to semestre</option>
+                    <option value="5to">5to semestre</option>
+                    <option value="6to">6to semestre</option>
+                    <option value="7mo">7mo semestre</option>
+                    <option value="8vo">8vo semestre</option>
+                    <option value="9no">9no semestre</option>
+                </select>
+            </p>
+
+            <!-- Clave de profesor (solo profesores) -->
+            <p id="campoClaveProfesor" hidden>
+                <label for="ClaveProfesor">Clave de profesor:</label><br>
+                <input type="text" id="ClaveProfesor" name="ClaveProfesor" placeholder="Ingresa tu clave de profesor">
+            </p>
+
+            <p>
+                <button type="submit" class="btn-guardar">Crear cuenta</button>
+            </p>
+
+            <p>
+                <label>¿Ya tienes una cuenta? <a href="#" class="auth-link"
+                        onclick="mostrarVista('login', event)">Iniciar sesión</a></label>
+            </p>
+        </form>
+    </div>
+
+    <!-- FOOTER UNISIERRA -->
+    <footer>
+        <p>&copy; 2026 Universidad de la Sierra — División de Ingeniería en Sistemas Computacionales</p>
+        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 6px;">Plataforma Web de Aprendizaje Asistido</p>
+    </footer>
+
+    <!-- JAVASCRIPT LÓGICA -->
+    <script>
+        const subtitulos = {
+            inicio: 'Sistema Web de Aprendizaje ISC | Introduccion a la Ingenieria en Sistemas Computacionales',
+            login: 'Sistema Web de Aprendizaje ISC | Ingreso al sistema',
+            registro: 'Sistema Web de Aprendizaje ISC | Registro de nuevo usuario'
+        };
+
+        // A dónde llevar a cada tipo de usuario
+        const destinos = {
+            estudiante: 'PanelAlumno.html',
+            profesor: 'PanelMaestro.html'
+        };
+
+        // Cambia entre inicio, login y registro dentro del mismo archivo
+        function mostrarVista(nombre, e) {
+            if (e) e.preventDefault();
+            document.querySelectorAll('.vista').forEach(v => v.classList.remove('activa'));
+            document.getElementById('vista-' + nombre).classList.add('activa');
+            document.getElementById('headerSubtitulo').textContent = subtitulos[nombre];
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById('formLogin').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const rol = this.querySelector('input[name="rol"]:checked').value;
+            sessionStorage.setItem('rolUsuario', rol);
+            window.location.href = 'verificacion.html';
+        });
+
+        document.getElementById('formRegistro').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const error = document.getElementById('regError');
+            if (document.getElementById('regContrasenia').value !== document.getElementById('regConfirmar').value) {
+                error.classList.add('visible');
+                return;
+            }
+            error.classList.remove('visible');
+            const rol = this.querySelector('input[name="rol"]:checked').value;
+            // Aquí iría el guardado del nuevo usuario
+           sessionStorage.setItem('rolUsuario', rol);
+window.location.href = (rol === 'profesor') ? 'PerfilMaestro.html' : 'PerfilAlumno.html';
+        });
+
+        // Muestra Semestre (estudiante) o Clave de profesor (profesor) según el rol
+        function actualizarCamposRol() {
+            const rol = document.querySelector('#formRegistro input[name="rol"]:checked').value;
+            const esProfesor = rol === 'profesor';
+
+            const campoSemestre = document.getElementById('campoSemestre');
+            const campoClave = document.getElementById('campoClaveProfesor');
+            const selectSemestre = document.getElementById('Semestre');
+            const inputClave = document.getElementById('ClaveProfesor');
+
+            campoSemestre.hidden = esProfesor;
+            campoClave.hidden = !esProfesor;
+
+            // Solo el campo visible es obligatorio
+            selectSemestre.required = !esProfesor;
+            inputClave.required = esProfesor;
+
+            // Limpia el campo que se oculta
+            if (esProfesor) selectSemestre.selectedIndex = 0;
+            else inputClave.value = '';
+        }
+
+        document.querySelectorAll('#formRegistro input[name="rol"]').forEach(radio => {
+            radio.addEventListener('change', actualizarCamposRol);
+        });
+        actualizarCamposRol();
+    </script>
+</body>
+
+</html>

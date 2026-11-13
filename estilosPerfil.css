@@ -1,0 +1,196 @@
+:root {
+    --azul-oscuro: #2c3e50;
+    --gris-medio: #6c757d;
+    --verde-esmeralda: #198754;
+    --naranja: #fd7e14;
+    --gris-claro: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--azul-oscuro);
+    margin: 0;
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Barra de navegación superior institucional */
+.navbar-superior {
+    background-color: var(--verde-esmeralda);
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 4px solid var(--naranja);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.navbar-superior .logo-container {
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-superior .logo-container img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-superior .info-sitio h1 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin: 0 0 4px 0;
+    border: none;
+    padding: 0;
+}
+
+.navbar-superior .info-sitio p {
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Contenedor principal del título de sección */
+.contenedor-titulo {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+h2.titulo-seccion {
+    color: var(--azul-oscuro);
+    font-size: 1.6rem;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+form#Personalizacion {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid var(--gris-medio);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: var(--azul-oscuro);
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--azul-oscuro);
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+input[type="file"] {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--gris-medio);
+}
+
+/* Estilo para los botones de radio */
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 4px;
+    accent-color: var(--azul-oscuro);
+}
+
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+.btn-guardar {
+    background-color: var(--verde-esmeralda);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-guardar:hover {
+    background-color: #146c43;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid var(--gris-medio);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: var(--azul-oscuro);
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--azul-oscuro);
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+/* Estilo para el botón de verificar correo */
+.btn-verificar {
+    background-color: var(--azul-oscuro);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.btn-verificar:hover {
+    background-color: #1a252f;
+}

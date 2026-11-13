@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar alta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="EstiloVerificacion.css">
+</head>
+<body>
+
+    <header id="header" class="top-header">
+        <div class="header-brand">
+            <div class="logo-box">
+                <img src="logo.png" alt="Logo Universidad de la Sierra" onerror="this.src='https://via.placeholder.com/150x50?text=UNISIERRA'">
+            </div>
+            <div class="header-titles">
+                <h1>Dar de alta</h1>
+                <p>Registro de alumnos</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-vista centrado">
+
+            <div id="divFormulario">
+                <div class="contenedor-titulo">
+                    <h2 class="titulo-seccion">Registrar alumno</h2>
+                </div>
+
+                <form id="formAlta" class="form-auth">
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="grupo">Grupo:</label>
+                        <select id="grupo" name="grupo" required>
+                            <option value="" disabled selected>Selecciona un grupo</option>
+                            <option value="ISC-1">ISC-1</option>
+                            <option value="ISC-2">ISC-2</option>
+                            <option value="ISC-3">ISC-3</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                        </select>
+                    </div>
+
+                    <div class="acciones-form">
+                        <button type="submit" id="Agregar" class="btn-guardar">✔ Agregar</button>
+                        <button type="reset" id="Cancelar" class="btn-secundario">✖ Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="divTabla" class="contenedor-tabla">
+                <table id="tabla" class="tabla-alumnos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Grupo</th>
+                            <th>Estado</th>
+                            <th>Opción</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad de la Sierra — División de Ingeniería en Sistemas Computacionales</p>
+        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 6px;">Plataforma Web de Aprendizaje Asistido</p>
+    </footer>
+
+</body>
+</html>

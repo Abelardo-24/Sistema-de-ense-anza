@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estudiante - Universidad de la Sierra</title>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="estilosPalumno.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR INSTITUCIONAL -->
+    <header class="univ-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo UniSierra" onerror="this.src='https://via.placeholder.com/50?text=Logo'">
+            </div>
+            <div class="header-titles">
+                <h1>Universidad de la Sierra</h1>
+                <p>Sistema Web de Aprendizaje ISC | Panel del Estudiante</p>
+            </div>
+        </div>
+        <div class="header-bottom-line"></div>
+    </header>
+    <nav>
+        <a href="cursos.html">Cursos</a>
+        <a href="lista_de_tareas.html">Lista de tareas</a>
+        <a href="PanelAlumno.html">Perfil</a>
+        <a href="visualizar_calificaciones.html">Calificaciones</a>
+        <a href="reportes_de_progreso.html">Reportes de Progreso</a>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL (DOS COLUMNAS) -->
+    <div class="container">
+
+        <!-- COLUMNA IZQUIERDA: PERFIL DE USUARIO -->
+        <aside class="profile-card">
+            <div class="avatar-container">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <h2 class="profile-name">Salvador Rascón</h2>
+            <p class="profile-role">Estudiante</p>
+            <a href="PerfilAlumno.html" class="btn-profile">
+                <i class="fa-solid fa-gear"></i> Opciones de Perfil
+            </a>
+        </aside>
+
+        <!-- COLUMNA DERECHA: CURSOS, TAREAS Y PROGRESO -->
+        <main class="main-content">
+
+            <!-- 1. SECCIÓN DE CURSOS -->
+            <section>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-graduation-cap"></i> Mis Cursos
+                </h2>
+                <div class="courses-grid">
+                    
+                    <!-- Curso 1 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-redes">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <h3 class="course-title">Fundamentos de Redes</h3>
+                            </div>
+                            <p class="course-description">
+                                Principios de conectividad, topologías de red, modelo OSI/TCP-IP y transmisión de datos.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">MÓDULO 01</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                    <!-- Curso 2 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-bd">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <h3 class="course-title">Base De Datos</h3>
+                            </div>
+                            <p class="course-description">
+                                Introducción al modelado entidad-relación, lenguaje SQL y diseño eficiente de tablas.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">MÓDULO 02</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                    <!-- Curso 3 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-hw">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <h3 class="course-title">Hardware</h3>
+                            </div>
+                            <p class="course-description">
+                                Arquitectura interna de la computadora, procesadores, memorias y dispositivos E/S.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">MÓDULO 03</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                    <!-- Curso 4 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-sw">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <h3 class="course-title">Software</h3>
+                            </div>
+                            <p class="course-description">
+                                Sistemas operativos, algoritmos, lógica de programación y ciclo de vida de aplicaciones.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">MÓDULO 04</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 2. SECCIÓN DE TAREAS PENDIENTES -->
+            <section>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-list-check"></i> Tareas Pendientes
+                </h2>
+                <div class="tasks-card">
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <div class="task-info">
+                                <span class="task-title">Diseño de Modelo Entidad-Relación</span>
+                                <span class="task-course">Base De Datos</span>
+                            </div>
+                            <span class="task-date"><i class="fa-regular fa-clock"></i> 20 Oct, 2026</span>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-info">
+                                <span class="task-title">Práctica de Subnetting e IP</span>
+                                <span class="task-course">Fundamentos de Redes</span>
+                            </div>
+                            <span class="task-date"><i class="fa-regular fa-clock"></i> 24 Oct, 2026</span>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-info">
+                                <span class="task-title">Informe sobre Arquitectura Von Neumann</span>
+                                <span class="task-course">Hardware</span>
+                            </div>
+                            <span class="task-date"><i class="fa-regular fa-clock"></i> 28 Oct, 2026</span>
+                        </li>
+                    </ul>
+                    <div class="section-action">
+                        <a href="lista_de_tareas.html" class="btn-action">Ver más tareas <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SECCIÓN DE PROGRESO DE LOS CURSOS -->
+            <section>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-chart-line"></i> Progreso de los Cursos
+                </h2>
+                <div class="progress-card">
+                    <div class="progress-list">
+                        
+                        <div>
+                            <div class="progress-item-header">
+                                <span>Fundamentos de Redes Computacionales</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="progress-item-header">
+                                <span>Base De Datos</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="progress-item-header">
+                                <span>Hardware</span>
+                                <span>30%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 30%;"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="progress-item-header">
+                                <span>Software</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="section-action">
+                        <a href="reportes_de_progreso.html" class="btn-action">Ver reportes de progreso <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

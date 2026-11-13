@@ -1,0 +1,316 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.ocultar{
+    display:none;
+}
+
+
+:root {
+    --azul-petroleo: #2c3e50;
+    --gris-neutro: #6c757d;
+    --verde-esmeralda: #198754;
+    --naranja: #fd7e14;
+    --blanco-humo: #e2e8f0;
+    --blanco: #ffffff;
+    --unisierra-green: #006837;      
+    --unisierra-dark-green: #004d28; 
+    --unisierra-gold: #d4af37;       
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--blanco-humo);
+    color: var(--azul-petroleo);
+    margin: 0;
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header {
+    background-color: var(--unisierra-green);
+    color: white;
+    padding: 1.2rem 2rem;
+    border-bottom: 5px solid var(--unisierra-gold);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.header-logo {
+    height: 65px;
+    width: auto;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-text h1 {
+    margin-left: -5px;
+    text-align: left;
+    color: var(--blanco);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+
+nav {
+    background-color: var(--verde-esmeralda);
+    width: 100%;
+    margin-top: -32px; 
+    margin-bottom: 40px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+nav span {
+    color: var(--blanco-humo);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--blanco);
+}
+
+/* Estilo para indicar en qué página estamos actualmente */
+nav a[href="lista_de_tareas.html"] {
+    background-color: var(--azul-petroleo);
+    color: var(--blanco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    color: var(--unisierra-dark-green);
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--blanco);
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: var(--blanco-humo);
+    width: 90%;
+    max-width: 900px;
+    margin: 20px 0;
+}
+
+section h2 {
+    font-size: 18px;
+    color: var(--azul-petroleo);
+    border-bottom: 2px solid var(--blanco-humo);
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+time {
+    background-color: var(--azul-petroleo);
+    color: var(--blanco);
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+details {
+    background-color: #f8fafc;
+    border: 1px solid var(--blanco-humo);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+details[open] {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    border-color: #cbd5e1;
+}
+
+
+summary {
+    padding: 16px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Apila el nombre de la materia sobre la tarea */
+    gap: 12px; /* Genera una separación limpia entre ambos */
+}
+
+summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* 1. Estilo tipo "Badge" para el nombre de la Materia (el primer label) */
+summary label:first-child {
+    background-color: var(--blanco-humo);
+    color: var(--azul-petroleo);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: max-content; /* Hace que el fondo solo envuelva el texto */
+    letter-spacing: 0.5px;
+    border: 1px solid #cbd5e1;
+    cursor: default; /* Indica que es solo informativo, no clickeable */
+}
+
+/* 2. Estilo para el contenedor del checkbox y la tarea (el segundo label) */
+summary label:last-child {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 4px; /* Alineación sutil hacia la derecha */
+}
+
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+    accent-color: var(--verde-esmeralda); /* Color institucional al marcar */
+    cursor: pointer;
+    flex-shrink: 0; /* Evita que el checkbox se aplaste en móviles */
+}
+
+summary strong {
+    color: var(--azul-petroleo);
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-size: 17px;
+}
+
+input[type="checkbox"]:checked + strong {
+    text-decoration: line-through;
+    color: var(--gris-neutro);
+    opacity: 0.7;
+}
+
+details p {
+    margin: 0;
+    /* Ajustamos el margen izquierdo para que el texto de la descripción quede alineado con el texto del checkbox */
+    padding: 0 20px 20px 42px; 
+    color: var(--gris-neutro);
+    font-size: 15px;
+    line-height: 1.6;
+}
+/* Estilos para los botones de entregar tarea */
+details button {
+    background-color: var(--unisierra-green);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    margin: 0 0 20px 42px; /* Se alinea exactamente con el padding izquierdo de la descripción (42px) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+}
+
+details button:hover {
+    background-color: var(--unisierra-dark-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+details button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    nav a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    section h2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

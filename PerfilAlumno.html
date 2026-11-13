@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Personalización - Universidad de la Sierra</title>
+    <link rel="stylesheet" href="estilosPerfil.css">
+</head>
+<body>
+
+    <header class="navbar-superior">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Universidad de la Sierra">
+        </div>
+        <div class="info-sitio">
+            <h1>Universidad de la Sierra</h1>
+            <p>Sistema Web de Aprendizaje ISC | Menú de Ajustes del Perfil</p>
+        </div>
+    </header>
+
+    <div class="contenedor-titulo">
+        <h2 class="titulo-seccion">Opciones de Perfil</h2>
+    </div>
+
+    <form id="Personalizacion">
+        <!-- foto de perfil -->
+        <p>
+            <label for="foto-perfil">Foto de perfil:</label><br>
+            <input type="file" id="foto-perfil" name="foto-perfil" accept="image/*">
+        </p>
+
+        <!-- Nombre de Usuario -->
+
+        <p>
+            <label for="NombreUsuario">Nombre de usuario:</label><br>
+            <input type="text" id="NombreUsuario" name="NombreUsuario">
+        </p>
+
+        <!-- Correo Electrónico con Botón de Verificar al lado -->
+        <p>
+            <label for="CorreoElectronico">Correo electrónico:</label><br>
+            <span style="display: inline-flex; gap: 8px; align-items: center;">
+                <input type="email" id="CorreoElectronico" name="CorreoElectronico" placeholder="ejemplo@correo.com">
+                <button type="button" id="btn-verificar">Verificar</button>
+            </span>
+        </p>
+
+        <!-- Contraseña -->
+        <p>
+            <label for="Contrasenia">Contraseña:</label><br>
+            <input type="password" id="Contrasenia" name="Contrasenia">
+        </p>
+
+        <!-- Selector del semestre -->
+        <p>
+            <label for="Semestre">Semestre:</label><br>
+            <select id="Semestre" name="Semestre">
+                <option value="" disabled selected>Selecciona un Semestre</option>
+                <option value="1ro">1er semestre</option>
+                <option value="2do">2do semestre</option>
+                <option value="3ro">3er semestre</option>
+                <option value="4to">4to semestre</option>
+                <option value="5to">5to semestre</option>
+                <option value="6to">6to semestre</option>
+                <option value="7mo">7mo semestre</option>
+                <option value="8vo">8vo semestre</option>
+                <option value="9no">9no semestre</option>
+            </select>
+        </p>
+
+         <!-- Radio del genero -->
+        <p>
+            <label>Género:</label><br>
+            <input type="radio" name="Sexo" id="Masculino" value="Masculino">
+            <label for="Masculino">Masculino</label>
+            <input type="radio" name="Sexo" id="Femenino" value="Femenino">
+            <label for="Femenino">Femenino</label>
+            <input type="radio" name="Sexo" id="NoDecirlo" value="NoDecirlo">
+            <label for="NoDecirlo">Prefiero no decirlo</label>
+        </p>
+
+        <!--Boton de guardar -->
+        <a href="PanelAlumno.html">
+            <button type="button" class="btn-guardar">Guardar Cambios</button>
+        </a>
+    </form>
+    <footer>
+        <p>&copy; 2026 Universidad de la Sierra — División de Ingeniería en Sistemas Computacionales</p>
+        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 6px;">Plataforma Web de Aprendizaje Asistido</p>
+    </footer>
+</body>
+</html>
