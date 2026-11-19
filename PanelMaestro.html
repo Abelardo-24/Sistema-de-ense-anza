@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Maestro - Universidad de la Sierra</title>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="../estilosPmaestro.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR INSTITUCIONAL -->
+    <header class="univ-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="../logo.png" alt="Logo UniSierra" onerror="this.src='https://via.placeholder.com/50?text=Logo'">
+            </div>
+            <div class="header-titles">
+                <h1>Universidad de la Sierra</h1>
+                <p>Sistema Web de Aprendizaje ISC | Panel del Docente</p>
+            </div>
+        </div>
+        <div class="header-bottom-line"></div>
+    </header>
+    <nav>
+        <a href="../cursos.html">Cursos</a>
+        <a href="lista_de_tareas_maestro.html">Lista de tareas</a>
+        <a href="PanelMaestro.html">Perfil</a>
+        <a href="Guardar_calificaciones_maestro.html">Calificaciones</a>
+        <a href="reportes_de_progreso_maestro.html">Reportes de Progreso</a>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL (DOS COLUMNAS) -->
+    <div class="container">
+
+        <!-- COLUMNA IZQUIERDA: PERFIL DE DOCENTE -->
+        <aside class="profile-card">
+            <div class="avatar-container">
+                <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h2 class="profile-name">Dr. Jesús M. Garcia</h2>
+            <p class="profile-role">Profesor</p>
+            <a href="PerfilMaestro.html" class="btn-profile">
+                <i class="fa-solid fa-gear"></i> Opciones de Perfil
+            </a>
+        </aside>
+
+        <!-- COLUMNA DERECHA: CURSOS, TAREAS Y EVALUACIONES -->
+        <main class="main-content">
+
+            <!-- 1. SECCIÓN DE CURSOS (Con opción de agregar curso) -->
+            <section>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-book-open"></i> Mis Cursos Impartidos
+                    </h2>
+                    <a href="#" class="btn-primary-action">
+                        <i class="fa-solid fa-plus"></i> Agregar Curso
+                    </a>
+                </div>
+                <div class="courses-grid">
+                    
+                    <!-- Curso 1 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-redes">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <h3 class="course-title">Fundamentos de Redes</h3>
+                            </div>
+                            <p class="course-description">
+                                Principios de conectividad, topologías de red, modelo OSI/TCP-IP y transmisión de datos.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">42 Alumnos</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                    <!-- Curso 2 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-bd">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <h3 class="course-title">Base De Datos</h3>
+                            </div>
+                            <p class="course-description">
+                                Introducción al modelado entidad-relación, lenguaje SQL y diseño eficiente de tablas.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">38 Alumnos</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                    <!-- Curso 3 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-hw">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <h3 class="course-title">Hardware</h3>
+                            </div>
+                            <p class="course-description">
+                                Arquitectura interna de la computadora, procesadores, memorias y dispositivos E/S.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">30 Alumnos</span>
+                            <i class="fa-solid fa-arrow-right arrow-btn"></i>
+                        </div>
+                    </div>
+
+                    <!-- Curso 4 -->
+                    <div class="course-card">
+                        <div>
+                            <div class="course-header">
+                                <div class="course-icon icon-sw">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <h3 class="course-title">Software</h3>
+                            </div>
+                            <p class="course-description">
+                                Sistemas operativos, algoritmos, lógica de programación y ciclo de vida de aplicaciones.
+                            </p>
+                        </div>
+                        <div class="course-footer">
+                            <span class="module-badge">45 Alumnos</span>
+                            <a href="DarAlta.html" class="btn-view-course"><i class="fa-solid fa-arrow-right arrow-btn"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 2. SECCIÓN DE TAREAS ASIGNADAS (Con botón de ver más y agregar tarea) -->
+            <section>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-list-check"></i> Tareas Asignadas
+                </h2>
+                <div class="tasks-card">
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <div class="task-info">
+                                <span class="task-title">Revisión de Modelo Entidad-Relación</span>
+                                <span class="task-course">Base De Datos</span>
+                            </div>
+                            <span class="task-date"><i class="fa-regular fa-clock"></i> Vence: 20 Oct, 2026</span>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-info">
+                                <span class="task-title">Ejercicios Prácticos de Subnetting</span>
+                                <span class="task-course">Fundamentos de Redes</span>
+                            </div>
+                            <span class="task-date"><i class="fa-regular fa-clock"></i> Vence: 24 Oct, 2026</span>
+                        </li>
+                        <li class="task-item">
+                            <div class="task-info">
+                                <span class="task-title">Reporte de Ensamble de Equipos</span>
+                                <span class="task-course">Hardware</span>
+                            </div>
+                            <span class="task-date"><i class="fa-regular fa-clock"></i> Vence: 28 Oct, 2026</span>
+                        </li>
+                    </ul>
+                    <div class="section-actions-group">
+                        <a href="#" class="btn-action"><i class="fa-solid fa-plus"></i> Agregar Tarea</a>
+                        <a href="#" class="btn-action">Ver más tareas <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SECCIÓN DE EVALUACIONES (4 bloques interactivos) -->
+            <section>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-file-pen"></i> Gestión de Evaluaciones
+                </h2>
+                <div class="eval-grid">
+                    
+                    <!-- Bloque 1 -->
+                    <a href="#" class="eval-card">
+                        <div class="eval-icon icon-ver">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3>Ver Evaluaciones</h3>
+                        <p>Consulta exámenes y pruebas programadas.</p>
+                    </a>
+
+                    <!-- Bloque 2 -->
+                    <a href="#" class="eval-card">
+                        <div class="eval-icon icon-calificar">
+                            <i class="fa-solid fa-check-to-slot"></i>
+                        </div>
+                        <h3>Calificar Evaluación</h3>
+                        <p>Asigna calificaciones y retroalimentación.</p>
+                    </a>
+
+                    <!-- Bloque 3 -->
+                    <a href="evaluaciones.html" class="eval-card">
+                        <div class="eval-icon icon-crear">
+                            <i class="fa-solid fa-square-plus"></i>
+                        </div>
+                        <h3>Crear Evaluación</h3>
+                        <p>Diseña nuevos exámenes o cuestionarios.</p>
+                    </a>
+
+                    <!-- Bloque 4 -->
+                    <a href="#" class="eval-card">
+                        <div class="eval-icon icon-borrar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                        <h3>Borrar Evaluación</h3>
+                        <p>Elimina exámenes obsoletos o incorrectos.</p>
+                    </a>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
